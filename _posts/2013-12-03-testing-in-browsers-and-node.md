@@ -478,7 +478,7 @@ tab with the test results for node. Another thing you'll see is a URL you can
 visit to connect a web browser for testing. After opening the URL in a few web
 browsers Testem should look like the following:
 
-![Testem Screenshot]({{ site.baseurl }}/public/blog/testem.png)
+![Testem Screenshot]({{ site.baseurl }}/assets/blog/testem.png)
 
 By using the left and right arrow keys you can see test results and error
 messages for all browsers and connected launchers. Pressing `enter` will rerun
