@@ -1,7 +1,7 @@
 ---
 ---
 /**
- * Based on Poole and Lanyon by @mdo.
+ * Originally based on Poole and Lanyon by @mdo.
  * https://github.com/poole/poole.
  */
 
@@ -9,8 +9,16 @@ $transition-time: 0.25s;
 $color-title: #303030;
 $color-heading: #313131;
 $color-text: #515151;
+$color-text-light: #c0c0c0;
 $color-link: #505050;
 $color-link-hover: #ab4642;
+$height-masthead: 40px;
+$breakpoint-small: 48em;
+$breakpoint-large: 56em;
+$font-size-base: 16px;
+$font-size-base-large: 20px;
+$font-size-small: 0.75rem;
+$font-size-heading: 2rem;
 
 * {
   box-sizing: border-box;
@@ -18,7 +26,7 @@ $color-link-hover: #ab4642;
 
 html {
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
-  font-size: 16px;
+  font-size: $font-size-base;
   line-height: 1.5;
   &, body {
     margin: 0;
@@ -26,7 +34,7 @@ html {
     overflow-x: hidden;
   }
   @media (min-width: 38em) {
-    font-size: 20px;
+    font-size: $font-size-base-large;
   }
 }
 
@@ -55,24 +63,24 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 2rem;
+  font-size: $font-size-heading;
 }
 h2 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
+  margin-top: $font-size-heading / 2;
+  font-size: 0.75 * $font-size-heading;
 }
 h3 {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
+  margin-top: 0.75 * $font-size-heading;
+  font-size: 0.625 * $font-size-heading;
 }
 h4, h5, h6 {
-  margin-top: 1rem;
-  font-size: 1rem;
+  margin-top: $font-size-heading / 2;
+  font-size: $font-size-heading / 2;
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: $font-size-heading / 2;
 }
 
 strong {
@@ -231,22 +239,44 @@ tbody tr:nth-child(odd) {
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  line-height: $height-masthead;
+  @media (min-width: $breakpoint-small) {
+    height: $height-masthead;
+  }
+  @media (max-width: $breakpoint-small) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
   &-title {
     margin-top: 0;
     margin-bottom: 0;
     color: $color-link;
+    flex: 0.6;
+    height: $height-masthead;
+    line-height: $height-masthead;
     small {
       font-size: 75%;
       font-weight: 400;
-      color: #c0c0c0;
+      color: $color-text-light;
       letter-spacing: 0;
-      @media (max-width: 48em) {
+      @media (max-width: $breakpoint-large) {
         display: none;
       }
     }
-    @media (max-width: 48em) {
+    @media (max-width: $breakpoint-small) {
       text-align: center;
     }
+  }
+  &-nav {
+    flex: 0.4;
+    font-size: $font-size-small;
+    display: flex;
+    justify-content: space-between;
+    height: $height-masthead;
+    line-height: $height-masthead;
   }
 }
 
@@ -266,7 +296,7 @@ tbody tr:nth-child(odd) {
     display: block;
     margin-top: -.5rem;
     margin-bottom: 1rem;
-    color: #9a9a9a;
+    color: $color-text-light;
   }
 }
 
@@ -321,138 +351,7 @@ a.pagination-item:hover {
     max-width: 32rem;
   }
   @media (min-width: 56em) {
-    max-width: 38rem;
-  }
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: -14rem;
-  width: 14rem;
-  visibility: hidden;
-  overflow-y: auto;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: .875rem;
-  color: rgba(255,255,255,.6);
-  background-color: #202020;
-  transition: all .25s ease-in-out;
-  @media (min-width: 30em) {
-    font-size: .75rem;
-  }
-  a {
-    font-weight: normal;
-    color: #fff;
-  }
-  &-item {
-    padding: 1rem;
-    &:last-of-type {
-      padding-top: 1rem;
-    }
-    p:last-child {
-      margin-bottom: 0;
-    }
-    @media (min-width: 48em) {
-      padding: 1.5rem;
-    }
-  }
-  &-nav {
-    border-bottom: 1px solid rgba(255,255,255,.1);
-    &-item {
-      display: block;
-      padding: .5rem 1rem;
-      border-top: 1px solid rgba(255,255,255,.1);
-      transition: all $transition-time;
-      @media (min-width: 48em) {
-        padding-left:  1.5rem;
-        padding-right: 1.5rem;
-      }
-      &.active, &:hover, &:focus {
-        text-decoration: none;
-        background-color: rgba(255,255,255,.1);
-        border-color: transparent;
-      }
-    }
-  }
-  &-checkbox {
-    position: absolute;
-    opacity: 0;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-  }
-  &-toggle {
-    position: absolute;
-    top: .8rem;
-    left: 1rem;
-    display: block;
-    padding: .25em .75em;
-    color: $color-link;
-    background-color: #fff;
-    border-radius: .25em;
-    cursor: pointer;
-    &:before {
-      display: inline-block;
-      width: 1rem;
-      height: .75rem;
-      content: "";
-      background-image: -webkit-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
-      background-image:    -moz-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
-      background-image:     -ms-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
-      background-image:         linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
-    }
-    #sidebar-checkbox:checked ~ & {
-      color: #fff;
-      background-color: #555;
-      &:before {
-        background-image: -webkit-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
-        background-image:    -moz-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
-        background-image:     -ms-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
-        background-image:         linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
-      }
-    }
-    @media (min-width: 30.1em) {
-      position: fixed;
-    }
-    @media print {
-      display: none;
-    }
-  }
-}
-
-.wrap,
-.sidebar,
-.sidebar-toggle {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-.wrap,
-.sidebar-toggle {
-  transition: transform .25s ease-in-out;
-}
-
-#sidebar-checkbox:checked {
-  & + .sidebar {
-    z-index: 10;
-    visibility: visible;
-  }
-  & ~ .sidebar, & ~ .wrap, & ~ .sidebar-toggle {
-    transform: translateX(14rem);
-  }
-}
-
-.sidebar-overlay {
-  #sidebar-checkbox:checked {
-    ~ .wrap {
-      transform: translateX(0);
-    }
-    ~.sidebar {
-      box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
-      &-toggle {
-        box-shadow: 0 0 0 .25rem #fff;
-      }
-    }
+    max-width: 45rem;
   }
 }
 
@@ -524,27 +423,6 @@ a.pagination-item:hover {
 .css .o + .nt,
 .css .nt + .nt { color: #999; }
 
-.social {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 0;
-  a.fa {
-    margin: 0 5px;
-    color: rgba(255,255,255,.6);
-    transition: all 0.5s;
-    &:hover {
-      color: rgba(255,255,255,1);
-    }
-    &:hover, &:focus {
-      text-decoration: none;
-    }
-  }
-}
-
-.copyright {
-  text-align: center;
-}
-
 ul.posts {
   list-style-type: none;
   padding-left: 0;
@@ -557,7 +435,7 @@ li.post {
     margin: 0 0 0 auto;
     width: 25%;
     text-align: right;
-    @media (max-width: 56em) {
+    @media (max-width: $breakpoint-large) {
       display: none;
     }
   }
@@ -569,8 +447,14 @@ a {
   .content p & {
     border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
   }
-  .container &:hover {
+  .container &:hover, &.active {
     color: $color-link-hover;
     border-bottom-color: $color-link-hover;
   }
+}
+
+.copyright {
+  color: $color-text-light;
+  text-align: center;
+  font-size: $font-size-small;
 }

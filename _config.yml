@@ -1,14 +1,21 @@
-permalink:   blog/:title/
+permalink:   blog/:title
 title_pre:   With
 title:       Ken Powers
 title_post:  Comes Ken Responsibility
 tagline:     With Ken Powers Comes Ken Responsibility
 url:         http://knpw.rs
 baseurl:     ''
+masthead_links:
+  - text: Blog
+    url: /
+  - text: About
+    url: /about
+  - text: Résumé
+    url: /resume
+  - text: GitHub
+    url: https://github.com/knpwrs
+  - text: Twitter
+    url: https://twitter.com/knpwrs
 author:
   name:      Ken Powers
   full_name: Kenneth Powers
-  email:     ken@kenpowers.net
-  github:    https://github.com/knpwrs
-  twitter:   https://twitter.com/knpwrs
-  linkedin:  https://www.linkedin.com/profile/view?id=168773387
