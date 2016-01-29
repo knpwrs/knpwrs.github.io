@@ -31,7 +31,7 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 
 ### Experience
 
-#### Software Engineer &middot; IBM Verse
+#### Staff Software Engineer &middot; IBM Verse
 
 ##### IBM &middot; 550 King Street &middot; Littleton, MA &middot; January 2013 - Present
 
