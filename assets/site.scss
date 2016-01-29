@@ -566,10 +566,10 @@ li.post {
 a {
   color: $color-link;
   transition: color $transition-time, border-bottom-color $transition-time;
-  .content & {
+  .content p & {
     border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
   }
-  &:hover {
+  .container &:hover {
     color: $color-link-hover;
     border-bottom-color: $color-link-hover;
   }
