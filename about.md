@@ -4,7 +4,7 @@ title: About
 ---
 
 <p class="message">
-  "Far away across the oceans. An undiscovered paradise. Forget New York and California. There’s a better place – now close your eyes. Take my hand. We are almost there. Our favorite place on earth." - Ylvis
+  "Far away across the oceans. An undiscovered paradise. Forget New York and California. There’s a better place – now close your eyes. Take my hand. We are almost there. Our favorite place on Earth." - Ylvis
 </p>
 
 I am a software engineer living and working in [Massachusetts]. I work extensively in JavaScript and HTML5 and have experience in many other technologies. Take a look at [my GitHub][github] to see my personal projects.
