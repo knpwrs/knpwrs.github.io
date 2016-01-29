@@ -423,20 +423,19 @@ a.pagination-item:hover {
 .css .o + .nt,
 .css .nt + .nt { color: #999; }
 
-ul.posts {
+.posts-list {
   list-style-type: none;
   padding-left: 0;
-}
-
-li.post {
-  margin-bottom: 0;
-  display: flex;
-  .post-date {
-    margin: 0 0 0 auto;
-    width: 25%;
-    text-align: right;
-    @media (max-width: $breakpoint-large) {
-      display: none;
+  &-post {
+    margin-bottom: 0;
+    display: flex;
+    &-date {
+      margin: 0 0 0 auto;
+      width: 25%;
+      text-align: right;
+      @media (max-width: $breakpoint-large) {
+        display: none;
+      }
     }
   }
 }
@@ -444,7 +443,7 @@ li.post {
 a {
   color: $color-link;
   transition: color $transition-time, border-bottom-color $transition-time;
-  .content p & {
+  .page &, .post & {
     border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
   }
   .container &:hover, &.active {

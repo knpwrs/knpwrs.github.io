@@ -7,7 +7,7 @@ title: About
   "Far away across the oceans. An undiscovered paradise. Forget New York and California. There’s a better place – now close your eyes. Take my hand. We are almost there. Our favorite place on earth." - Ylvis
 </p>
 
-I am a software engineer living and working in [Massachusetts]. I work extensively in JavaScript and HTML5 and have [experience in many other technologies][resume]. Take a look at [my GitHub][github] to see my personal projects.
+I am a software engineer living and working in [Massachusetts]. I work extensively in JavaScript and HTML5 and have experience in many other technologies. Take a look at [my GitHub][github] to see my personal projects.
 
 I also enjoy music, play drums, and am a big time fan of the [New England Patriots][ne]. Feel free to take a look around and contact me with any questions:
 
@@ -87,6 +87,20 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 * [Cursor Dance Party][cdp] is a tech demo of WebSockets and HTML5 Canvas.
   Users see the cursors of all other connected users as they move around.
 
+### Volunteer Work
+
+#### ExcelChurch &middot; Lancaster, MA
+
+* Weekly setup and teardown of professional A/V equipment including sound,
+  recording, and projection.
+* Set up electronic drums to trigger sounds from [Superior Drummer] and set up
+  external MIDI controller running through the drums to control click tracks and
+  backing tracks as well as automate the rest of our A/V setup (projection,
+  lights, recording, etc). Entire MIDI chain runs over ethernet to back of
+  house.
+* Designed system for live broadcast and overflow projection.
+* See [full setup diagram][excel-setup].
+
 ### Education
 
 #### University of Massachusetts Amherst
@@ -113,4 +127,5 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 [cdp]: http://www.cursordanceparty.com/ "Cursor Dance Party"
 [Massachusetts]: https://www.youtube.com/watch?v=JvUMV1N7eGM
 [ne]: http://www.patriots.com/ "New England Patriots"
-[resume]: {{ site.baseurl }}/resume
+[Superior Drummer]: http://www.toontrack.com/product/superior-drummer-2/ "ToonTrack Superior Drummer"
+[excel-setup]: {{site.baseurl}}/assets/images/excel-setup-diagram.png
