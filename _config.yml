@@ -10,8 +10,6 @@ masthead_links:
     url: /
   - text: About
     url: /about
-  - text: Résumé
-    url: /resume
   - text: GitHub
     url: https://github.com/knpwrs
   - text: Twitter
