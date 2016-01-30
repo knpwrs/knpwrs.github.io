@@ -10,17 +10,18 @@ layout: default
 </article>
 <div id="disqus_thread"></div>
 <script>
-var disqus_shortname = 'kenpowers',
-  disqus_identifier = 'testing-in-browsers-and-node',
-  disqus_title = '{{ page.title }}',
-  disqus_url = '{{ site.url }}/blog/testing-in-browsers-and-node';
-(function () {
-  var dsq = document.createElement('script');
-  dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  document.body.appendChild(dsq);
-})();</script>
-<noscript>Please enabled JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+var disqus_config = function () {
+  this.page.url = '{{ site.url }}{{ page.url }}';
+  this.page.identifier = '{{ page.id }}';
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = '//kenpowers.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 <div class="pagination">
   {% if page.previous %}
