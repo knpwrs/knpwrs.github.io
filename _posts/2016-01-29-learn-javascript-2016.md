@@ -204,43 +204,41 @@ built-in to [Babel] so if you are using [Babel] for compiling your ES2015+ and
 JSX to ES5 and regular JavaScript it's pretty easy to drop-in. [Flow] takes
 JavaScript that looks like this:
 
-<pre><code>function foo(x, y) {
+~~~ts
+function foo(x, y) {
   return x.length * y;
 }
-foo('Hello', 42); // Returns `210`</code></pre>
+foo('Hello', 42); // Returns `210`
+~~~
 
 And makes it look like this:
 
-<pre><code>function foo(x: string, y: number): string {
+~~~ts
+function foo(x: string, y: number): number {
   return x.length * y;
 }
-foo('Hello', 42); // Returns `210`</code></pre>
+foo('Hello', 42); // Returns `210`
+~~~
 
 [Flow] can also infer types in certain cases:
 
-<pre><code>function foo(x) {
+~~~ts
+function foo(x) {
   return x * 10;
 }
-foo('Hello, world!'); // Error!</code></pre>
+foo('Hello, world!'); // Error!
+~~~
 
 That code would cause a type error because you can't multiply a String by a
 number.
 
 [TypeScript] on the other hand is a superset of JavaScript that provides static
-typing. It has [built-in support for JSX][tsjsx] so you can still do cool React
-stuff with it. [TypeScript] takes JavaScript that looks like this:
-
-<pre><code>function foo(x, y) {
-  return x.length * y;
-}
-foo('Hello', 42); // Returns `210`</code></pre>
-
-And makes it look like this:
-
-<pre><code>function foo(x: string, y: number) {
-  return x.length * y;
-}
-foo('Hello', 42); // Returns `210`</code></pre>
+typing [and a whole bunch of other features][tsfeat]. The most basic example is
+identical to the [Flow] code above; however, in my experince, the tooling for
+[TypeScript] is a lot stronger than that for [Flow]. [Visual Studio Code] has
+built-in support for [TypeScript] as does [WebStorm] (both also include
+type-aware autocomplete across files). There are also plugins available for
+[Atom][tsatom], [Visual Studio][tsvs], and [SublimeText][tsst].
 
 If you want to use TypeScript and React Component hot loading you'll need to do
 a little bit of extra configuration. React's hot loading depends on using
@@ -250,7 +248,8 @@ which leaves JSX untransformed. From there, you can pipe its output into Babel
 running your JSX transform. Your [WebPack] configuration will look something
 like this:
 
-<pre><code>module.exports = {
+~~~js
+module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
@@ -260,7 +259,8 @@ like this:
       loaders: ['babel', 'ts']
     }]
   }
-}</code></pre>
+}
+~~~
 
 From there you'll want to configure [Babel] with a `.babelrc` file and
 [TypeScript] with a `tsconfig.json` file, making sure to `preserve` JSX so
@@ -409,7 +409,11 @@ request.
 [SPA]: https://en.wikipedia.org/wiki/Single-page_application "Single-Page Application"
 [sr-src]: https://github.com/andrewngu/sound-redux "Sound Redux Source Code"
 [sr-web]: https://soundredux.io/ "Sound Redux"
+[tsatom]: https://atom.io/packages/atom-typescript "Atom TypeScript Package"
+[tsfeat]: https://en.wikipedia.org/wiki/TypeScript#Language_features "TypeScript Language Features"
 [tsjsx]: https://github.com/Microsoft/TypeScript/wiki/JSX "JSX in TypeScript"
+[tsst]: https://github.com/Microsoft/TypeScript-Sublime-Plugin "TypeScript Sublime Text Plugin"
+[tsvs]: https://www.microsoft.com/en-us/download/details.aspx?id=48593 "TypeScript for Visual Studio"
 [TypeScript]: http://www.typescriptlang.org/ "TypeScript: A typed superset of JavaScript that compiles to plain JavaScript."
 [Universal]: https://medium.com/@mjackson/universal-javascript-4761051b7ae9#.bv8a2ech9 "Universal JavaScript"
 [vdom]: https://facebook.github.io/react/docs/glossary.html "React (Virtual) DOM Terminology"
@@ -417,4 +421,5 @@ request.
 [Vue.js]: http://vuejs.org/ "Reactive Components for Modern Web Interfaces"
 [webpack-hmr]: http://webpack.github.io/docs/hot-module-replacement-with-webpack.html
 [WebPack]: http://webpack.github.io/ "WebPack Module Builder"
+[WebStorm]: https://www.jetbrains.com/webstorm/ "WebStorm"
 [Yolk]: https://github.com/garbles/yolk "A library for building asynchronous user interfaces."

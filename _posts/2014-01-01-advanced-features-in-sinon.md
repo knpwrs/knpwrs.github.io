@@ -21,7 +21,7 @@ substantial length your tests can take longer than ideal to complete. Sinon
 lets us replace the global `setTimeout` and `setInterval` functions with fake
 versions that we can control. Observe:
 
-{% highlight js %}
+~~~js
 describe('fake timers', function () {
   beforeEach(function () {
     // Overwrite the global timer functions (setTimeout, setInterval) with Sinon fakes
@@ -58,7 +58,7 @@ describe('fake timers', function () {
     expect(spy).to.be.calledThrice;
   });
 });
-{% endhighlight %}
+~~~
 
 When we call `sinon.useFakeTimers()` Sinon replaces the global `setTimeout`
 and `setInterval` functions and returns a clock object we can control. By
@@ -74,7 +74,7 @@ Spies are capable of determining the order they were called relative to each
 other. We can demonstrate this by testing that a number of timeouts were
 triggered in the proper order:
 
-{% highlight js %}
+~~~js
 it('should be able to verify call order', function () {
   // Create some spies
   var spy1 = sinon.spy(), spy2 = sinon.spy();
@@ -88,7 +88,7 @@ it('should be able to verify call order', function () {
   expect(spy2).to.be.called;
   expect(spy1).to.be.calledBefore(spy2);
 });
-{% endhighlight %}
+~~~
 
 I am using `sinon-chai` but you can also verify call order using
 `spy.calledBefore(otherSpy)` and `spy.calledAfter(otherSpy)`.
@@ -99,7 +99,7 @@ On to faking `XMLHttpRequest`! Sinon allows us to override the global
 `XMLHttpRequest` object and synchronously control its behavior. Consider the
 following:
 
-{% highlight js %}
+~~~js
 describe('fake requests', function () {
   beforeEach(function () {
     // Overwrite the global XMLHttpRequest with Sinon fakes
@@ -130,7 +130,7 @@ describe('fake requests', function () {
     expect(spy).to.be.calledWith('FooBarBaz!');
   });
 });
-{% endhighlight %}
+~~~
 
 Before each test we set up the fake `XMLHttpRequest` and override `onCreate`
 so that we may track all requests we make using it. After each test we restore
@@ -149,7 +149,7 @@ Fake servers in Sinon are an extension of fake requests which keep track of
 requests for us so we don't have to! Fake servers work very similarly to fake
 requests, as such:
 
-{% highlight js %}
+~~~js
 describe('fake servers', function () {
   beforeEach(function () {
     // Set up a fake server (calls `sinon.useFakeXMLHttpRequest()`)
@@ -198,7 +198,7 @@ describe('fake servers', function () {
     this.server.respondWith('GET', /\/foo\/bar\/baz$/, [200, {'Content-Type': 'text/plain'}, 'FooBarBaz!']);
   });
 });
-{% endhighlight %}
+~~~
 
 Here we have seven tests which all have the same assertions. For that reason,
 I put the assertions in the `afterEach` hook. The basic flow of using fake

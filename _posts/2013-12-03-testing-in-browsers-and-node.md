@@ -28,7 +28,7 @@ major browsers and Node.
 
 Without further to do, a basic test suite looks like the following:
 
-{% highlight js %}
+~~~js
 describe('Library Tests', function () {
   before(function () {
     // set up the environment
@@ -38,7 +38,7 @@ describe('Library Tests', function () {
     // make assertions
   });
 });
-{% endhighlight %}
+~~~
 
 The above code should be fairly self-explanatory. `describe` is used to
 describe a test suite, and `it` is used to define actual tests. I am also
@@ -55,7 +55,7 @@ One of the advantages of using Mocha as opposed to certain other testing
 frameworks is that it makes asynchronous testing really easy. Consider the
 following test:
 
-{% highlight js %}
+~~~js
 it('should foobar', function (done) {
   // Simulate calling an asynchronous method with `setTimeout`
   setTimeout(function () {
@@ -63,7 +63,7 @@ it('should foobar', function (done) {
     done();
   }, 1000);
 });
-{% endhighlight %}
+~~~
 
 The only change to the test is that the `it` function now accepts a `done`
 argument. `done` is a function you should call when the test has completed
@@ -72,7 +72,7 @@ first argument if you have one to give it. The previously mentioned `before`,
 `beforeEach`, `after`, and `afterEach` hooks can also be set up to run
 asynchronously in the same fashion:
 
-{% highlight js %}
+~~~js
 describe('async tests', function () {
   // Before Hooks
   before(function (done) {
@@ -101,7 +101,7 @@ describe('async tests', function () {
     setTimeout(done, 1000);
   });
 });
-{% endhighlight %}
+~~~
 
 The above code will take approximately 8 seconds to run and will follow a
 serial execution path as such:
@@ -131,14 +131,14 @@ assertions for your to use as you see fit. I prefer
 [`expect`](http://chaijs.com/api/bdd/)-style assertions which read like
 sentences. See the following examples:
 
-{% highlight js %}
+~~~js
 expect(3).to.equal(3);
 expect(3).to.not.equal('three');
 expect([1, [2, [3]]]).to.deep.equal([1, [2, [3]]]);
 expect(new Error('foo')).to.be.instanceOf(Error);
 expect('foo').to.be.a('string');
 expect(!false).to.be.true;
-{% endhighlight %}
+~~~
 
 As you can see, the `expect` style of assertions are very readable and even
 self-documenting. The lack of parentheses after `true` in `to.be.true` is not
@@ -169,7 +169,7 @@ regarding its execution including arguments passed to it, return value, the
 value of `this`, and any exceptions thrown for all of its calls. See the
 following example:
 
-{% highlight js %}
+~~~js
 var func = sinon.spy();
 func(1, 'foo');
 expect(func.called).to.be.true;
@@ -181,7 +181,7 @@ expect(func.firstCall.calledWith(sinon.match.number, sinon.match.string)).to.be.
 expect(func.getCall(0).calledWith(sinon.match.number, sinon.match.string)).to.be.true;
 // You can even verify that a function was called with specific arguments (not just types)
 expect(func.firstCall.calledWith(1, 'foo')).to.be.true;
-{% endhighlight %}
+~~~
 
 As you can see, Sinon spies are extremely flexible. This example only begins
 to scratch the surface of spies in Sinon. `calledOnce` is accompanied by
@@ -208,7 +208,7 @@ functionality check out Sinon's [matchers documentation][matchers].
 Spies can wrap themselves around existing methods on existing methods.
 Consider the following example utilizing [jQuery][jquery]:
 
-{% highlight js %}
+~~~js
 // Spy on the `ajax` method of the `jQuery` object
 sinon.spy(jQuery, 'ajax');
 // Call `jQuery.get(...)` which calls `jQuery.ajax` down the chain
@@ -218,7 +218,7 @@ expect(jQuery.ajax.calledOnce).to.be.true;
 expect(jQuery.ajax.getCall(0).args[0].url).to.equal('/some/resource');
 // Unwrap `jQuery.ajax` so other tests will be unaffected and can get up their own spies
 jQuery.ajax.restore();
-{% endhighlight %}
+~~~
 
 In this example I referenced the passed argument directly and checked a
 property on it for equality to what was passed. I also called the `restore()`
@@ -239,14 +239,14 @@ argument which was passed to it -- with or without arguments, synchronously or
 asynchronously. Stubs can even be programmed to do different things when
 different arguments are passed to them. Consider the following example:
 
-{% highlight js %}
+~~~js
 var func = sinon.stub();
 func.withArgs(42).returns(1);
 func.throws();
 
 expect(func(42)).to.equal(1);
 expect(func).to.throw(Error);
-{% endhighlight %}
+~~~
 
 When `func` is passed `42`, it will return `1`. Otherwise, it will throw an
 exception.
@@ -255,7 +255,7 @@ Just like how you can spy on methods of objects, you can stub methods of
 objects. Consider the following example of stubbing the `readFile` method on
 Node's filesystem module:
 
-{% highlight js %}
+~~~js
 // Stub the file system module
 sinon.stub(fs, 'readFile');
 // Asynchronously call the third argument with a null error and some text when passed certain arguments
@@ -269,7 +269,7 @@ fs.readFile
 // Do your testing
 // Afterwards make sure you restore `fs.readFile` to its original functionality.
 fs.readFile.restore();
-{% endhighlight %}
+~~~
 
 Now everything that calls `fs.readFile('foo.txt', 'utf8', callback)` will have
 `callback` called with `null` for an error and `'Foo!'` for data and
@@ -302,14 +302,14 @@ for Chai which can streamline expectations for Sinon spies, stubs, and mocks.
 Using the plugin, my first Sinon example from above would look like the
 following:
 
-{% highlight js %}
+~~~js
 var func = sinon.spy();
 func(1, 'foo');
 expect(func).to.have.been.called;
 expect(func).to.have.been.calledOnce;
 expect(func).to.have.been.calledWith(sinon.match.number, sinon.match.string);
 expect(func).to.have.been.calledWith(1, 'foo');
-{% endhighlight %}
+~~~
 
 For more information, check out the [Sinon-Chai plugin
 documentation][sinonchai].
@@ -346,26 +346,26 @@ First, you need to install [Node][node]. My preferred method is to use
 Next, clone the project down to your local workspace, change into the project
 directory, and install all dependencies using the following commands:
 
-```
+~~~
 $ git clone https://github.com/KenPowers/testing-in-browsers-and-node.git
 $ cd testing-in-browsers-and-node
 $ npm install
-```
+~~~
 
 Optionally, you can install Testem and Mocha globally (they are both installed
 locally as a part of the project, but installing them globally will allow you
 to use them elsewhere):
 
-```
+~~~
 $ npm install -g testem mocha
-```
+~~~
 
 Be aware that as of the writing of this article, if you are running Windows
 then you will need to [follow one extra step][windows].
 
 Now we can take a look at how everything works together. First, `testem.json`:
 
-{% highlight json %}
+~~~json
 {
   "framework": "mocha",
   "src_files": [
@@ -384,7 +384,7 @@ Now we can take a look at how everything works together. First, `testem.json`:
     "node"
   ]
 }
-{% endhighlight %}
+~~~
 
 Let's walk through this file key-by-key. First we have the `framework` option
 set to `mocha`. This tells Testem to load Mocha into all connected web
@@ -405,11 +405,11 @@ our Node launcher.
 
 Now we just have to take a look at one section of `package.json`:
 
-{% highlight json %}
+~~~json
 "scripts": {
   "test": "./node_modules/.bin/testem"
 }
-{% endhighlight %}
+~~~
 
 With this piece of configuration you can run `npm test` which will run the
 local installation of Testem which will read `testem.json` and start running
@@ -418,7 +418,7 @@ just run `testem` directly.
 
 One last file needs a walk though: `test/setup.js`:
 
-{% highlight js %}
+~~~js
 // Export modules to global scope as necessary (only for testing)
 if (typeof process !== 'undefined' && process.title === 'node') {
   // We are in node. Require modules.
@@ -432,7 +432,7 @@ if (typeof process !== 'undefined' && process.title === 'node') {
   // num and sinon already exported globally in the browser.
   isBrowser = true;
 }
-{% endhighlight %}
+~~~
 
 This file exports the libraries we are using as global variables. I know what
 you are thinking: "NO! NOT GLOBAL VARIABLES! GLOBAL VARIABLES ARE EVIL!" The
@@ -444,7 +444,7 @@ if you need to test things differently in browsers than you do in Node. You
 can even set up tests to only run in certain environments by using code like
 the following:
 
-{% highlight js %}
+~~~js
 describe('multi-environment testing', function () {
   if (isBrowser) {
     it('should foo', function () {
@@ -459,7 +459,7 @@ describe('multi-environment testing', function () {
     // This test will run everywhere.
   });
 });
-{% endhighlight %}
+~~~
 
 Take a moment to look through the other files included in the project. There
 is no need to walk through them here because after reading this article their

@@ -10,7 +10,7 @@ programming and has been implemented in several JavaScript libraries and more
 recently in ECMAScript 5 through [`Function.prototype.bind`][bind]. Consider
 the following examples:
 
-{% highlight js %}
+~~~js
 // Adds two numbers
 var add = function (a, b) {
   return a + b;
@@ -26,7 +26,7 @@ var addSix = add.bind(null, 6);
 console.log(addTwo(1));  // Logs 3
 console.log(addFour(3)); // Logs 7
 console.log(addSix(5));  // Logs 11
-{% endhighlight %}
+~~~
 
 In each of the above examples the original function is not modified -- rather,
 a new function is created which calls the original function by concatenating
@@ -48,7 +48,7 @@ manipulation, builds upon this convention with functions like
 that in turn take nothing but these conventional callbacks. Consider the
 following examples:
 
-{% highlight js %}
+~~~js
 // Without partials
 async.parallel([
   // `done` accepts err, result
@@ -70,7 +70,7 @@ async.parallel([
 ], function (err, results) {
   // same as before
 });
-{% endhighlight %}
+~~~
 
 Async provides its own partial implementation by the name of [`apply`][apply]
 which is very similar to Underscore's implementation. By partially applying
@@ -83,7 +83,7 @@ As a side note, you may have noticed that the last argument to
 partially apply `Async.parallel` and `Async.series` and pass those partials to
 other calls to `Async.parallel` and `Async.series`, as such:
 
-{% highlight js %}
+~~~js
 async.series([
   async.apply(async.parallel, [
     // First group of parallel tasks
@@ -95,7 +95,7 @@ async.series([
   // err is the same as always
   // results is an array of arrays
 });
-{% endhighlight %}
+~~~
 
 This code will run a group of tasks in parallel and when they are all done run
 a second group of tasks in parallel. The final `results` array will be an
@@ -108,7 +108,7 @@ On to a more practical example, can we read a bunch of files in parallel and
 only have to write `async.apply` once? Of course! Enter
 [`Array.prototype.map`][map]:
 
-{% highlight js %}
+~~~js
 async.parallel([
   'first.txt',
   'second.txt',
@@ -119,7 +119,7 @@ async.parallel([
 }), function (err, results) {
   // Same as before.
 });
-{% endhighlight %}
+~~~
 
 In this example calling `map` on the array of file names returns an array of
 partially applied `fs.readfile` functions. Using this technique you can
@@ -134,7 +134,7 @@ So partials are pretty cool. But you have to be careful about how you use them
 functions which take more arguments than you intend on passing. Consider the
 following:
 
-{% highlight js %}
+~~~js
 // This function multiplies all of its arguments together
 var multiply = function () {
   return Array.prototype.slice.call(arguments, 0).reduce(function (prev, cur) {
@@ -152,7 +152,7 @@ console.log([1, 2, 3, 4].map(mult2));
 console.log([1, 2, 3, 4].map(function (v) {
   return mult2(v);
 }));
-{% endhighlight %}
+~~~
 
 Really, it's not fair to call this a limitation of partials but JavaScript
 functions in general -- we would have gotten a similar result had we not made
@@ -168,7 +168,7 @@ means that they are declared without an arguments list. They still take
 arguments but anything that checks for a partial's `length` property will more
 than likely malfunction. For example, asynchronous tests in Mocha:
 
-{% highlight js %}
+~~~js
 // Some sort of function is declared somewhere as such:
 var asyncFunc = function (data, callback) {
   // do something and call callback per node convention;
@@ -184,7 +184,7 @@ it('should do something without error', asyncFunc.bind(null, 'foobarbaz')); // D
 it('should do something without error', function (done) {
   asyncFunc('foobarbaz', done);
 });
-{% endhighlight %}
+~~~
 
 To learn more about testing with Mocha check out [my article on the
 subject][post] and the [official Mocha documentation][mocha].
@@ -198,7 +198,7 @@ opportunity for you to avoid the creation of a partial if you don't have to
 make one. Take for example [`setTimeout`][setTimeout] and
 [`setInterval`][setInterval]:
 
-{% highlight js %}
+~~~js
 // Consider the following:
 setTimeout(function () {
   doSomething(foo, bar, baz);
@@ -212,7 +212,7 @@ setTimeout(doSomething, 1000, foo, bar, baz);
 
 // It also works with setInterval:
 setInterval(doSomething, 1000, foo, bar, baz);
-{% endhighlight %}
+~~~
 
 In compliant JavaScript environments, the extra arguments passed to
 `setTimeout` and `setInterval` are passed to the function when it is called.
