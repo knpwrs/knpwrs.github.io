@@ -11,10 +11,12 @@ I am a software engineer living and working in [Massachusetts]. I work extensive
 
 I also enjoy music, play drums, and am a big time fan of the [New England Patriots][ne]. Feel free to take a look around and contact me with any questions:
 
-* Email: ken [at] kenpowers [dot] net
-* [GitHub]({{ site.author.github }})
-* [Twitter]({{ site.author.twitter }})
-* [LinkedIn]({{ site.author.linkedin }})
+<div class="about-social">
+  <a href="mailto:ken@kenpowers.net" title="Email"><i class="fa fa-envelope"></i></a>
+  <a href="{{ site.author.github }}" title="GitHub"><i class="fa fa-github"></i></a>
+  <a href="{{ site.author.twitter }}" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a href="{{ site.author.linkedin }}" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+</div>
 
 ## Résumé
 
@@ -35,24 +37,21 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 
 ##### IBM &middot; 550 King Street &middot; Littleton, MA &middot; January 2013 - Present
 
-* Worked with the Dojo Toolkit, OpenSocial, and several bleeding-edge web
-  technologies
-* Created several prototypes for IBM Collaboration Solutions conceptual
-  products
-* Developed modular code capable of running in different environments with
-  different content security policies
-* Set up test harness for new IBM Collaboration Solutions project
-* Automated builds and deployments with Jenkins
-* Conducted technical interviews for intern and new hire candidates
-* Contributed Less Compilation to OpenNTF JavaScript Aggregator
-* Prototyped PostCSS / AutoPrefixer support for OpenNTF JavaScript Aggregator
+* Worked with React, Redux, Dojo, and OpenSocial, continually integrating
+  bleeding-edge web technologies.
+* Focused on modular code capable of running in varying environments with
+  varying content security policies.
+* Automated builds and deployments with Jenkins.
+* Conducted technical interviews for intern and new hire candidates.
+* Contributed Less Compilation to OpenNTF JavaScript Aggregator.
+* Prototyped PostCSS / AutoPrefixer support for OpenNTF JavaScript Aggregator.
 
 #### Smarter Cities Technical COOP
 
 ##### IBM &middot; August 2012 - November 2012
 
-* Worked with the Dojo Toolkit and OpenLayers
-* Developed a prototype for an IBM Smarter Cities data visualization product
+* Worked with the Dojo Toolkit, OpenStreetMap, and OpenLayers.
+* Developed a prototype for an IBM Smarter Cities data visualization product.
 
 #### IBM Extreme Blue Innovation Lab Technical Intern
 
@@ -62,8 +61,7 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
   application development solution targeted at non-technical users.
 * Worked with an agile scrum process using Rational Team Concert to manage
   tasks.
-* Worked with several technologies including Java, JavaScript / Dojo, and
-  HTML5.
+* Worked with several technologies including Java, JavaScript, and HTML5.
 * Project features an intuitive drag and drop interface which allows
   non-technical users to create their own applications out of functional
   building blocks.
@@ -86,6 +84,7 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
   to various open source projects.
 * [Cursor Dance Party][cdp] is a tech demo of WebSockets and HTML5 Canvas.
   Users see the cursors of all other connected users as they move around.
+  Survived the front page of reddit.
 
 ### Volunteer Work
 

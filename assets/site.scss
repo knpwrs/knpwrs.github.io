@@ -19,6 +19,7 @@ $font-size-base: 16px;
 $font-size-base-large: 20px;
 $font-size-small: 0.75rem;
 $font-size-heading: 2rem;
+$font-size-social-icon: 4rem;
 
 * {
   box-sizing: border-box;
@@ -441,6 +442,15 @@ a {
   .container &:hover, &.active {
     color: $color-link-hover;
     border-bottom-color: $color-link-hover;
+  }
+}
+
+.about-social {
+  display: flex;
+  justify-content: space-around;
+  font-size: $font-size-social-icon;
+  a {
+    border: none;
   }
 }
 
