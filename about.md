@@ -12,7 +12,7 @@ I am a software engineer living and working in [Massachusetts]. I work extensive
 I also enjoy music, play drums, and am a big time fan of the [New England Patriots][ne]. Feel free to take a look around and contact me with any questions:
 
 <div class="about-social">
-  <a href="mailto:ken@kenpowers.net" title="Email"><i class="fa fa-envelope"></i></a>
+  <a href="mailto:{{ site.author.email }}" title="Email"><i class="fa fa-envelope"></i></a>
   <a href="{{ site.author.github }}" title="GitHub"><i class="fa fa-github"></i></a>
   <a href="{{ site.author.twitter }}" title="Twitter"><i class="fa fa-twitter"></i></a>
   <a href="{{ site.author.linkedin }}" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
