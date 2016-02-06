@@ -23,7 +23,7 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 ### Languages
 
 * Proficient in: JavaScript (Universal Node / Browser), HTML5, CSS3
-* Familiar with: C# and .NET Framework, Java, Scala, Python, Ruby, SQL
+* Familiar with: C# and .NET Framework, Java, Scala, Ruby, SQL
 
 ### Software
 
