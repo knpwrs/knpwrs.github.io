@@ -284,6 +284,7 @@ time, you should check out the following resources:
 * [Awesome React]
 * [Awesome React Native]
 * [Awesome Redux]
+* [Este.js] -- a dev stack and starter kit for functional and universal (browser, server, mobile) React apps.
 
 ## [JavaScript Fatigue]?
 
@@ -380,6 +381,7 @@ request.
 [Enzyme]: https://github.com/airbnb/enzyme "Enzyme is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output."
 [ES2015]: https://babeljs.io/docs/learn-es2015/ "Learn ES2015"
 [ESLint]: http://eslint.org/ "ESLint: A pluggable linting utility for JavaScript."
+[Este.js]: https://github.com/este/este "Este.js: A dev stack and starter kit for functional and universal (browser, server, mobile) React apps."
 [Flow]: http://flowtype.org/ "Flow: TypeChecker for JavaScript"
 [gaeron-series]: https://egghead.io/series/getting-started-with-redux "Getting Started With Redux"
 [gaeron-talk]: https://www.youtube.com/watch?v=xsSnOQynTHs "Dan Abramov - Live React: Hot Reloading with Time Travel at react-europe 2015"
