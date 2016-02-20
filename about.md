@@ -41,6 +41,8 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
   bleeding-edge web technologies.
 * Focused on modular code capable of running in varying environments with
   varying content security policies.
+* Developed front-end request layer mimicking Dojo's request API providing
+  automatic reauthentication with no changes required to client code.
 * Automated builds and deployments with Jenkins.
 * Conducted technical interviews for intern and new hire candidates.
 * Contributed Less Compilation to OpenNTF JavaScript Aggregator.
