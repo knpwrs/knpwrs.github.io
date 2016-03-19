@@ -165,7 +165,7 @@ ram).
 
 ### Getting Rid of `this`
 
-Thanks to libraries like [React], [Redux], and [`lodash/fp`][lodash],
+Thanks to libraries like [React], [Redux], [Rambda], and [`lodash/fp`][lodash],
 purely-functional programming is becoming more popular in JavaScript. Not quite
 [Haskell]-level but the concepts of pure functions and immutable state are
 there. [Yolk] is a really cool user interface library written on top of [RxJS]
@@ -398,6 +398,7 @@ request.
 [monorepo]: http://danluu.com/monorepo/ "Advantages of monolithic version control"
 [NativeScript]: https://www.nativescript.org/ "Build truly native apps with JavaScript"
 [NPM]: https://www.npmjs.com/ "npm is the package manager for javascript."
+[Rambda]: http://ramdajs.com/ "A practical functional library for Javascript programmers."
 [React Native]: https://facebook.github.io/react-native/ "React Native: A Framework For Building Native Apps with React"
 [React Router]: https://github.com/rackt/react-router "A complete routing solution for React.js"
 [React]: https://facebook.github.io/react/ "React"
