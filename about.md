@@ -33,14 +33,14 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 
 ### Experience
 
-#### Staff Software Engineer &middot; IBM Verse
+#### Staff Software Engineer &middot; Core UI and Performance &middot; IBM Verse
 
 ##### IBM &middot; 550 King Street &middot; Littleton, MA &middot; January 2013 - Present
 
 * Worked with React, Redux, Dojo, and OpenSocial, continually integrating
   bleeding-edge web technologies.
-* Focused on modular code capable of running in varying environments with
-  varying content security policies.
+* Focused on modular, high-performance code capable of running in varying
+  environments with varying content security policies.
 * Developed front-end request layer mimicking Dojo's request API providing
   automatic reauthentication with no changes required to client code.
 * Automated builds and deployments with Jenkins.
