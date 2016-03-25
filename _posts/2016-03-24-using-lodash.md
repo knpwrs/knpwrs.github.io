@@ -44,9 +44,9 @@ path is steering too much towards writing an opinion piece. That said, there is
 a very popular library which I would recommend. It's in the title of this post.
 It's [Lodash]! As far as my quick glance can tell it is still the most
 depended-upon module on all of npm (unlikely to be unpublished, and yes [npm is
-working on that][npm blog post]), has great code coverage, and is packed full of
-well-designed and thought-out utility functions including one which does the
-same thing that the unpublished code from npm did ([Lodash] calls it
+working on that][npm blog post]), [has great code coverage][t3], and is packed
+full of well-designed and thought-out utility functions including one which does
+the same thing that the unpublished code from npm did ([Lodash] calls it
 [`padStart`] to match the [proposal]).
 
 **Update:** [Lodash] is not only the most depended-upon package on npm, [it's
