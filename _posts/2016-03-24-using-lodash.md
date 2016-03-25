@@ -49,6 +49,9 @@ well-designed and thought-out utility functions including one which does the
 same thing that the unpublished code from npm did ([Lodash] calls it
 [`padStart`]).
 
+**Update:** [Lodash] is not only the most depended-upon package on npm, [it's
+the most depended-upon by a large margin.][npmrank]
+
 ## But isn't Lodash monolithic?
 
 If you use it from a CDN, sure. But that's not the use case we're talking about
@@ -209,6 +212,7 @@ shrink since you only need to depend on one library instead of many.
 [ld-issue]: https://github.com/lodash/lodash/issues/1426 "Cherry-Picking and Shortcut Fusion"
 [lodash]: https://lodash.com/ "Lodash: A modern JavaScript utility library delivering modularity, performance, & extras."
 [npm blog post]: http://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm "kik, left-pad, and npm"
+[npmrank]: https://gist.github.com/anvaka/8e8fa57c7ee1350e3491#file-01-most-dependent-upon-md "Top 1000 most depended-upon packages"
 [Rollup]: http://rollupjs.org/ "Next-generation ES6 module bundler"
 [shaking-rollup]: https://github.com/rollup/rollup/issues/45#issuecomment-151160765 "Tree Shaking Results for Rollup"
 [shaking-webpack]: https://github.com/webpack/webpack/issues/1750 "Tree Shaking Results for webpack"
