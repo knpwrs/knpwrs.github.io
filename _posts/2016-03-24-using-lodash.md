@@ -47,7 +47,7 @@ depended-upon module on all of npm (unlikely to be unpublished, and yes [npm is
 working on that][npm blog post]), has great code coverage, and is packed full of
 well-designed and thought-out utility functions including one which does the
 same thing that the unpublished code from npm did ([Lodash] calls it
-[`padStart`]).
+[`padStart`] to match the [proposal]).
 
 **Update:** [Lodash] is not only the most depended-upon package on npm, [it's
 the most depended-upon by a large margin.][npmrank]
@@ -197,9 +197,10 @@ if you are depending on a micro-library such as `pad-left`, or something
 similar, you should instead depend on [Lodash] and then use `lodash/padStart`,
 or whatever the equivalent [Lodash] functions are for whatever you need in your
 project. Whatever you do, don't just copy and paste code or re-implement basic
-functionality in every project. [Lodash] functions are well-tested and will help
-you keep everything very [DRY]. Small side benefit: your `package.json` will
-shrink since you only need to depend on one library instead of many.
+functionality in every project. [Lodash] functions are well-tested ([1][t1],
+[2][t2], [3][t3]) and will help you keep everything very [DRY]. Small side
+benefit: your `package.json` will shrink since you only need to depend on one
+library instead of many.
 
 [`babel-plugin-lodash`]: https://github.com/lodash/babel-plugin-lodash "Use Lodash as a monolithic library without worrying about bundling unused parts."
 [`es2015-native-modules`]: https://github.com/araphel/babel-preset-es2015-native-modules "babel-preset-es2015-native-modules"
@@ -219,3 +220,7 @@ shrink since you only need to depend on one library instead of many.
 [shortcut fusion]: https://lodash.com/docs#_ "Lodash Shortcut Fusion"
 [Tree Shaking]: http://www.2ality.com/2015/12/webpack-tree-shaking.html "Tree-shaking with webpack 2 and Babel 6"
 [webpack]: http://webpack.github.io/ "webpack module bundler"
+[proposal]: https://github.com/tc39/proposal-string-pad-start-end "String.prototype.padStart / String.prototype.padEnd"
+[t1]: https://travis-ci.org/lodash/ "Lodash CI"
+[t2]: https://saucelabs.com/u/lodash "Lodash Cross-Browser Tests"
+[t3]: https://codecov.io/github/lodash "Lodash Code Coverage"
