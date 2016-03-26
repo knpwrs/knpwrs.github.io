@@ -58,8 +58,8 @@ where you can try out Lodash:
 <div id="tonic-lodash">
   // Require everything, or you can `require` individual functions
   // See http://knpw.rs/blog/using-lodash
-  const ld = require('lodash');
-  ld.add(3, 5);
+  const _ = require('lodash');
+  _.add(3, 5);
 </div>
 
 ### Pros
