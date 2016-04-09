@@ -93,7 +93,7 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 
 #### Tech Team Lead
 
-##### ExcelChurch &middot; Lancaster, MA
+##### ExcelChurch &middot; Leominster, MA
 
 * Weekly setup and teardown of professional A/V equipment including sound,
   recording, and projection.
