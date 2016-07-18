@@ -57,7 +57,7 @@ the most depended-upon by a large margin.][npmrank]
 If you use it from a CDN, sure. But that's not the use case we're talking about
 here. We're talking about something which was unpublished from npm. When you
 install [Lodash] from npm there are a few ways you can grab only the functions
-so you don't bloat your build. Let's take a look.
+you use so you don't bloat your build. Let's take a look.
 
 ## Option 1: Import / Require Sub-Modules
 
