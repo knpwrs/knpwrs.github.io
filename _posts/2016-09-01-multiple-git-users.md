@@ -70,7 +70,7 @@ Documentation for other shells is available on the [`direnv`] website, though
 it's very similar.
 
 Now that you have [`direnv`] setup you can create `.envrc` files that export
-variables. For our purposes we can create a `.envrc` file for the following
+variables. For our purposes we can create a `.envrc` file with the following
 contents:
 
 ~~~sh
