@@ -34,7 +34,9 @@ What more needs to be said?
 * Sharing anything requires a little extra work (creating a Gist, repo, etc).
 * You have to manually require modules if you want to access them by name.
 
-## Option 2: [Tonic]
+## Option 2: ~~[Tonic]~~ [RunKit]
+
+**Update 2016-09-15:** [Tonic] is now known as [RunKit].
 
 You may have seen the following link in the sidebar on npm:
 
@@ -153,6 +155,7 @@ modules.
 [tonic-data]: https://tonicdev.com/tonic/city-forecast "Tonic Data Visualization"
 [tonic-slack]: https://tonicdev.com/matt/slack-slash-commands/1.0.0 "Tonic Slack Slash Commands"
 [repl'em]: https://github.com/raine/replem "repl'em"
+[RunKit]: http://blog.runkit.com/2016/09/13/tonic-is-now-runkit-a-part-of-stripe.html "RunKit"
 [node_]: https://nodejs.org/api/repl.html#repl_repl_features "Node REPL Features"
 [`-e`]: https://nodejs.org/api/cli.html#cli_e_eval_script "Evaluate argument as JavaScript."
 [`-r`]: https://nodejs.org/api/cli.html#cli_r_require_module "Require argument as module."
