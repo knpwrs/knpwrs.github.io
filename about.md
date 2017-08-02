@@ -22,20 +22,33 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 
 ### Languages
 
-* Proficient in: JavaScript (Universal Node / Browser), HTML5, CSS3
-* Familiar with: C# and .NET Framework, Java, Scala, Ruby, SQL
+* Proficient in: JavaScript (Universal Node / Browser), HTML5, CSS3 (SCSS)
+* Familiar with: C# and .NET Framework, Java, Scala, Ruby, Swift, SQL
 
 ### Software
 
-* Database: PostgreSQL, MySQL, SQL Server, MongoDB, Redis, Memcached
+* Database: PostgreSQL, MySQL, SQL Server, MongoDB, Redis
 * Server: nginx, Apache httpd
-* Platforms: Mac OS X, Linux / Unix, Microsoft Windows
+* Tools: Docker, Git, Jenkins, Travis CI
+* Platforms: macOS, Linux / Unix, Microsoft Windows
 
 ### Experience
 
+#### Software Engineer
+
+##### Candescent Health &middot; 221 Crescent Street, Building 5 Suite 301, Waltham, MA &middot; April 2016 - Present
+
+* Worked with React, Redux, Vue, Angular, Node, PHP, MySQL, and Docker.
+* Used Flyway for database migrations across multiple client environments.
+* Designed and created a dashboard for monitoring doctors and their workloads
+  across multiple facilities.
+* Prototyped Electron applications with native integrations.
+* Open-sourced a Babel plugin for automatic dependency injection in Angular.
+* Presented multiple tech talks on modern JavaScript and CSS best practices.
+
 #### Staff Software Engineer &middot; Core UI and Performance &middot; IBM Verse
 
-##### IBM &middot; 550 King Street &middot; Littleton, MA &middot; January 2013 - Present
+##### IBM &middot; 550 King Street &middot; Littleton, MA &middot; January 2013 - April 2016
 
 * Worked with React, Redux, Dojo, and OpenSocial, continually integrating
   bleeding-edge web technologies.
@@ -47,6 +60,9 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 * Conducted technical interviews for intern and new hire candidates.
 * Contributed Less Compilation to OpenNTF JavaScript Aggregator.
 * Prototyped PostCSS / AutoPrefixer support for OpenNTF JavaScript Aggregator.
+* Created a mock browser environment for load testing Verse's offline
+  capabilities.
+* Created shim for testing New Relic Synthetics offline.
 
 #### Smarter Cities Technical COOP
 
@@ -73,6 +89,7 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 
 ##### Big Y Foods, Inc &middot; 2145 Roosevelt Ave &middot; Springfield, MA &middot; 2010 - 2012
 
+* Worked with ASP.NET MVC (C\#) and Microsoft SQL Server.
 * Created stored procedures for Microsoft SQL Server to generate reports on
   various data collected from stores.
 * Created an internal web application to help corporate employees better
@@ -91,18 +108,17 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 
 ### Volunteer Work
 
-#### Tech Team Lead
+#### Technical Director
 
 ##### ExcelChurch &middot; Leominster, MA
 
+* Designed and implemented live production setup using ProPresenter, Reaper,
+  Lightkey, and Wirecast.
+* Set up electronic drums to trigger sounds with [Superior Drummer] and set up
+  external MIDI controller running through the drums to control click tracks,
+  backing tracks, lights, projection, and recording.
 * Weekly setup and teardown of professional A/V equipment including sound,
   recording, and projection.
-* Set up electronic drums to trigger sounds from [Superior Drummer] and set up
-  external MIDI controller running through the drums to control click tracks and
-  backing tracks as well as automate the rest of our A/V setup (projection,
-  lights, recording, etc). Entire MIDI chain runs over ethernet to back of
-  house.
-* Designed system for live broadcast and overflow projection.
 * See [full setup diagram][excel-setup].
 
 ### Education
@@ -111,9 +127,9 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 
 ##### Amherst, MA &middot; 2011 - 2013
 
-* Received Bachelor's of Science in Computer Science
-* Received two awards for outstanding performance in individual classes
-* Made the Dean's List three out of four semesters
+* Received Bachelor's of Science in Computer Science.
+* Received two awards for outstanding performance in individual classes.
+* Made the Dean's List three out of four semesters.
 * GPA: 3.7
 
 #### Springfield Technical Community College
@@ -121,10 +137,10 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 ##### Springfield, MA &middot; 2009 - 2011
 
 * Received Associate's of Science in Engineering and Science Transfer (Focus
-  on Computer Science)
-* Received two annual awards for outstanding overall performance
-* Completed two directed studies (one in Computer Science and one in Math)
-* Made the Dean's List all four semesters
+  on Computer Science).
+* Received two annual awards for outstanding overall performance.
+* Completed two directed studies (one in Computer Science and one in Math).
+* Made the Dean's List all four semesters.
 * GPA: 3.8
 
 [github]: https://github.com/knpwrs "knpwrs on GitHub"
