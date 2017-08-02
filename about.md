@@ -36,7 +36,7 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
 
 #### Software Engineer
 
-##### Candescent Health &middot; 221 Crescent Street, Building 5 Suite 301, Waltham, MA &middot; April 2016 - Present
+##### Candescent Health &middot; 221 Crescent Street, Building 5 Suite 301 &middot;  Waltham, MA &middot; April 2016 - Present
 
 * Worked with React, Redux, Vue, Angular, Node, PHP, MySQL, and Docker.
 * Used Flyway for database migrations across multiple client environments.
