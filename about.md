@@ -119,6 +119,8 @@ I also enjoy music, play drums, and am a big time fan of the [New England Patrio
   backing tracks, lights, projection, and recording.
 * Weekly setup and teardown of professional A/V equipment including sound,
   recording, and projection.
+* Provided hands-on training, recorded instructional videos, and wrote
+  documentation for other volunteers.
 * See [full setup diagram][excel-setup].
 
 ### Education
