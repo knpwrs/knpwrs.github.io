@@ -7,9 +7,13 @@ title: About
   "Far away across the oceans. An undiscovered paradise. Forget New York and California. There’s a better place – now close your eyes. Take my hand. We are almost there. Our favorite place on Earth." - Ylvis
 </p>
 
-I am a software engineer living and working in [Massachusetts]. I work extensively in Universal JavaScript and HTML5 and have experience in many other technologies. Take a look at [my GitHub][github] to see my personal projects.
+I am a software engineer living and working in [Massachusetts]. I work
+extensively in Universal JavaScript and HTML5 and have experience in many other
+technologies. Take a look at [my GitHub][github] to see my personal projects.
 
-I also enjoy music, play drums and bass guitar, and am a big time fan of the [New England Patriots][ne]. Feel free to take a look around and contact me with any questions.
+I also enjoy music, play drums and bass guitar, and am a big time fan of the
+[New England Patriots][ne]. Feel free to take a look around and contact me with
+any questions.
 
 <div class="about-social">
   <a href="mailto:{{ site.author.email }}" title="Email"><i class="fa fa-envelope"></i></a>
